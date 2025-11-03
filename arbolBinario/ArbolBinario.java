@@ -1,4 +1,7 @@
 package arbolBinario;
+import cola.Cola;
+import pila.Pila;
+
 
 public class ArbolBinario {
     //Atributo
@@ -62,6 +65,71 @@ public class ArbolBinario {
             visitar(aux);
         }
     }
+    /*
+     * Recorrido por niveles utilizando una cola
+     */
+    public void recorridoPorNivelnes(){
+        Cola<Nodo> cola = new Cola<Nodo>();
+        cola.encolar(raiz);
+        while (!cola.esVacia()){
+            Nodo aux = cola.frente();
+            visitar(aux);
+            if(aux.getIzquierdo()!=null){
+                cola.encolar(aux.getIzquierdo());
+            }
+            if(aux.getDerecho()!=null){
+                cola.encolar(aux.getDerecho());
+            }
+            cola.desencolar();
+        }
+    }
+    /*
+     * Recorrido preorden de forma iterativa utilizando una pila
+     */
+    public void preordenIterativo(){
+        Pila<Nodo> pila = new Pila<Nodo>();
+        pila.apilar(raiz);
+        while (!pila.esVacia()){
+            Nodo aux = pila.cima();
+            visitar(aux);
+            pila.retirar();
+            if(aux.getDerecho()!=null){
+                pila.apilar(aux.getDerecho());
+            }
+            if(aux.getIzquierdo()!=null){
+                pila.apilar(aux.getIzquierdo());
+            }
+        }
+    }
+    /*
+     * Recorrido inorden iterativo utilizando una pila
+     */
+    public void inordenIterativo(){
+        Pila<Nodo> pila = new Pila<>();
+        pila.apilar(raiz);
+        Nodo aux = raiz.getIzquierdo();
+        while (aux != null || !pila.esVacia()){
+            if (aux != null){
+                pila.apilar(aux);
+                aux = aux.getIzquierdo();
+            }else{
+                aux = pila.cima();
+                pila.retirar();
+                visitar(aux);
+                aux = aux.getDerecho();
+            }
+        }
+
+
+    }
+    //pendiente explicar recorrido inorden iterativo
+
+    
+
+
+
+
+
     
     
     

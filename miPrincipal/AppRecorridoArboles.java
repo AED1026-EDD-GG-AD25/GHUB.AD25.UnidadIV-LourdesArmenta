@@ -6,7 +6,7 @@ public class AppRecorridoArboles {
     
     public static void inicio(){
         //Crear un arbol de la figura vista en clase
-        ArbolBinario ab = new ArbolBinario();
+         ArbolBinario ab = new ArbolBinario();
         Nodo nodoA = new Nodo("A");
         Nodo nodoB = new Nodo("B");
         Nodo nodoC = new Nodo("C");
@@ -21,17 +21,29 @@ public class AppRecorridoArboles {
         nodoB.setDerecho(nodoE);
         nodoC.setIzquierdo(nodoF);
         nodoC.setDerecho(nodoG);
-        //imprime los recorridos
+
+        //imprimier los recorridos
         System.out.println();
-        System.out.println("Recorrido Recursivo Preorden:");
+        System.out.println("Preorden Recursivo:");
         ab.preorden();
         System.out.println();
-        System.out.println("Recorrido Recursivo Inorden:");
+        System.out.println("Inorden Recursivo:");
         ab.inorden();
         System.out.println();
-        System.out.println("Recorrido Recursivo Postorden:");
+        System.out.println("PostOrden Recursivo:");
         ab.postorden();
         System.out.println();
+        System.out.println("Recorrido por Niveles:");
+        ab.recorridoPorNivelnes();
+        System.out.println();
+        System.out.println("Preorden Iterativo:");
+        ab.preordenIterativo();
+        System.out.println();
+        System.out.println("Inorden Iterativo:");
+        ab.inordenIterativo();
+        System.out.println();
+        
+
 
 
 
