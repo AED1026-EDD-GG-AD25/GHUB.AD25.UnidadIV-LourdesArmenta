@@ -42,6 +42,9 @@ public class AppRecorridoArboles {
         System.out.println("Inorden Iterativo:");
         ab.inordenIterativo();
         System.out.println();
+        System.out.println("PostOrden Iterativo:");
+        ab.postordenIterativo();
+        System.out.println();
         
 
 

@@ -122,15 +122,32 @@ public class ArbolBinario {
 
 
     }
-    //pendiente explicar recorrido inorden iterativo
-
-    
-
-
-
-
-
-    
-    
+    /*
+     * Recorrido postorden iterativo
+     */
+    public void postordenIterativo(){
+        Pila<Nodo> pila = new Pila<Nodo>();
+        Nodo aux = raiz;
+        Nodo q = raiz;
+        while (aux !=null){
+            //avanza por izquierda ya apila los nodos
+            while(aux.getIzquierdo() !=null){
+                pila.apilar(aux);
+                aux = aux.getIzquierdo();
+            }
+            //ahora voy por la derecha
+            while (aux !=null && (aux.getDerecho() == null || aux.getDerecho()==q)){
+                visitar(aux);
+                q = aux;
+                if (pila.esVacia()){
+                    return;
+                }
+                aux = pila.cima();
+                pila.retirar();
+            }
+            pila.apilar(aux);
+            aux = aux.getDerecho();
+        }
+    }
     
 }
