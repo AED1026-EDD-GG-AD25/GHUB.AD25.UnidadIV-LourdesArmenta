@@ -1,3 +1,6 @@
+./arbolBinarioBusqueda/Persona.java
+./arbolBinarioBusqueda/Entero.java
+./arbolBinarioBusqueda/Comparable.java
 ./cola/Cola.java
 ./cola/Nodo.java
 ./miTest/AppTest.java
@@ -5,5 +8,7 @@
 ./arbolBinario/ArbolBinario.java
 ./pila/Pila.java
 ./pila/Nodo.java
+./miPrincipal/AppPersonaComparable.java
 ./miPrincipal/Principal.java
+./miPrincipal/AppEnteroComparable.java
 ./miPrincipal/AppRecorridoArboles.java
