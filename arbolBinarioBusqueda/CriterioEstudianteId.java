@@ -5,12 +5,12 @@ public class CriterioEstudianteId extends Criterio<Estudiante>{
     @Override
     public int comparar(Estudiante a, Estudiante b) {
         
-        if (a.getId()>b.getId())
-           return 0;
+        if (a.getId()<b.getId())
+           return -1;
         else if (a.getId()>b.getId())
             return 1;
         else
-            return -1;
+            return 0;
     }
     
     

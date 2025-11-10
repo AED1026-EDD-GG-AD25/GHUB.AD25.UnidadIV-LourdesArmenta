@@ -30,9 +30,7 @@ public class Persona implements Comparable{
     public boolean esIgual(Object q) {
         Persona p = (Persona) q;
         //return (id == p.getId());
-        return nombre.equals(p.getNombre());
-
-        
+        return (nombre.compareTo(p.getNombre()) == 0);
     }
     @Override
     public boolean esMayor(Object q) {
@@ -42,8 +40,6 @@ public class Persona implements Comparable{
             return true;
         else
             return false;
-        
-
         
     }
     @Override

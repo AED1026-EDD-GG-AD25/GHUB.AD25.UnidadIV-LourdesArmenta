@@ -30,15 +30,17 @@ public class Principal {
                 case 6:
                     AppEstudiantesCriterioNombre.inicio();
                     break;
+                case 7:
+                    AppEstudiantesCriterioPromedio.inicio();
+                    break;
+                case 8:
+                    AppEstudianteCriterioIdComparator.inicio();
+                    break;
                 case 0:
                     System.out.println("Hasta Luego");
                     break;
-                
-                
-            
                 default:
-                    System.out.println("Seleccione la opción correcta!");
-                    
+                    System.out.println("Seleccione la opción correcta!");  
             }
             }catch (InputMismatchException ex){
                 System.out.println("Seleccione la opcion correcta "+ex.getMessage());
@@ -51,15 +53,17 @@ public class Principal {
         
     }
     public static void menu(){
-        System.out.println("***************************");
-        System.out.println("      Arboles Binarios     ");
-        System.out.println("***************************");
-        System.out.println("1. Recorrido               ");
-        System.out.println("2. Comparar Enteros        ");
-        System.out.println("3. Comparara Estudiantes   ");
-        System.out.println("4. Ordenar Estudiantes.    ");
-        System.out.println("5. Ordenar Estudiantes por criterio id");
+        System.out.println("****************************************");
+        System.out.println("           Arboles Binarios             ");
+        System.out.println("****************************************");
+        System.out.println("1. Recorrido                            ");
+        System.out.println("2. Comparar Enteros                     ");
+        System.out.println("3. Comparara Persona                    ");
+        System.out.println("4. Ordenar Estudiantes por Nombre       ");
+        System.out.println("5. Ordenar Estudiantes por criterio id  ");
         System.out.println("6. Ordenar Estudiante por criterio nombre");
+        System.out.println("7. Ordenar Estudiante por criterio Promedio");
+        System.out.println("8. Ordenar Estudiantes interface Comparator");
         System.out.println();
         System.out.println("0. Salir");
         System.out.print("Selecciona la opción deseada:");

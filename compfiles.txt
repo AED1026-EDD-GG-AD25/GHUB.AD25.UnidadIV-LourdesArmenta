@@ -1,9 +1,12 @@
 ./arbolBinarioBusqueda/Persona.java
 ./arbolBinarioBusqueda/Util.java
+./arbolBinarioBusqueda/comparator.java
 ./arbolBinarioBusqueda/Criterio.java
+./arbolBinarioBusqueda/OtroCriterio.java
 ./arbolBinarioBusqueda/CriterioEstudianteId.java
 ./arbolBinarioBusqueda/CriterioEstudianteNombre.java
 ./arbolBinarioBusqueda/Entero.java
+./arbolBinarioBusqueda/CriterioEstudianteProm.java
 ./arbolBinarioBusqueda/Estudiante.java
 ./arbolBinarioBusqueda/Comparable.java
 ./cola/Cola.java
@@ -21,3 +24,5 @@
 ./miPrincipal/AppEstudianteComparable.java
 ./miPrincipal/AppEstudiantesCriterioNombre.java
 ./miPrincipal/AppEstudiantesCriterioId.java
+./miPrincipal/AppEstudianteCriterioIdComparator.java
+./miPrincipal/AppEstudiantesCriterioPromedio.java
