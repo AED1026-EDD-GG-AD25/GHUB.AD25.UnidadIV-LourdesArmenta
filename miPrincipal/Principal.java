@@ -63,7 +63,7 @@ public class Principal {
         System.out.println("5. Ordenar Estudiantes por criterio id  ");
         System.out.println("6. Ordenar Estudiante por criterio nombre");
         System.out.println("7. Ordenar Estudiante por criterio Promedio");
-        System.out.println("8. Ordenar Estudiantes interface Comparator");
+        System.out.println("8. Ordenar Estudiantes por ID interface Comparator");
         System.out.println();
         System.out.println("0. Salir");
         System.out.print("Selecciona la opción deseada:");

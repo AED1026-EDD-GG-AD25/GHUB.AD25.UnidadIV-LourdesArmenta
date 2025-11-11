@@ -1,9 +1,11 @@
 ./arbolBinarioBusqueda/Persona.java
 ./arbolBinarioBusqueda/Util.java
+./arbolBinarioBusqueda/Nodo.java
 ./arbolBinarioBusqueda/comparator.java
 ./arbolBinarioBusqueda/Criterio.java
 ./arbolBinarioBusqueda/OtroCriterio.java
 ./arbolBinarioBusqueda/CriterioEstudianteId.java
+./arbolBinarioBusqueda/ArbolBinarioBusqueda.java
 ./arbolBinarioBusqueda/CriterioEstudianteNombre.java
 ./arbolBinarioBusqueda/Entero.java
 ./arbolBinarioBusqueda/CriterioEstudianteProm.java
