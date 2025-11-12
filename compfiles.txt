@@ -6,6 +6,7 @@
 ./arbolBinarioBusqueda/OtroCriterio.java
 ./arbolBinarioBusqueda/CriterioEstudianteId.java
 ./arbolBinarioBusqueda/ArbolBinarioBusqueda.java
+./arbolBinarioBusqueda/BTreePrinter.java
 ./arbolBinarioBusqueda/CriterioEstudianteNombre.java
 ./arbolBinarioBusqueda/Entero.java
 ./arbolBinarioBusqueda/CriterioEstudianteProm.java
@@ -19,6 +20,7 @@
 ./pila/Pila.java
 ./pila/Nodo.java
 ./miPrincipal/AppPersonaComparable.java
+./miPrincipal/AppOperacionesABB.java
 ./miPrincipal/Principal.java
 ./miPrincipal/AppEnteroComparable.java
 ./miPrincipal/AppRecorridoArboles.java
