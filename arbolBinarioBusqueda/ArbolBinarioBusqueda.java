@@ -150,7 +150,7 @@ public class ArbolBinarioBusqueda {
         }
     }
     /*
-     * Inserta un nodo en el arbol binario
+     * Inserta iterativa un nodo en el arbol binario
      */
     public void insertar(Object valor) throws Exception{
         Comparable dato = (Comparable) valor;
@@ -160,12 +160,67 @@ public class ArbolBinarioBusqueda {
             raiz = nuevo;
 
         }else{
-            //anterior: referemcia al padre de aux
+            //anterior: referencia al padre de aux
             Nodo anterior = null;
             //aux: quxiliar que va recorriendo los nodos, desde la rai<
             Nodo aux = raiz;
+            while (aux != null){
+                anterior = aux;
+                if (dato.esMenor(aux.getValor()))
+                   aux = aux.getIzquierdo();
+                else if(dato.esMayor(aux.getValor()))
+                   aux = aux.getDerecho();
+                else
+                  throw new Exception("Dato Duplicado");
+            }
+            if(dato.esMenor(anterior.getValor()))
+                anterior.setIzquierdo(nuevo);
+            else
+               anterior.setDerecho(nuevo);
 
         }
+    }
+    /*
+     * Búsqueda iterativa
+     */
+    public Nodo buscar(Object valor){
+        Comparable dato = (Comparable)valor;
+        if (raiz == null){
+            return raiz;
+        }else{
+            //aux: auxiliar que va recorriendo los nodos desde la raiz
+            Nodo aux = raiz;
+            while (aux!=null){
+                if(dato.esIgual(aux.getValor()))
+                    return aux;
+                if(dato.esMenor(aux.getValor()))
+                    aux = aux.getIzquierdo();
+                else
+                    aux = aux.getDerecho();
+            }
+            return null;
+        }
+    }
+    /*
+     * Interfaz de buscar que invoca al metodo recursivo: localizar
+     */
+    public Nodo buscar2(Object valor){
+        Comparable dato = (Comparable)valor;
+        if(raiz == null)
+          return null;
+        else
+          return localizar(raiz,dato);
+    }
+    //Funcion Recursiva
+    public Nodo localizar(Nodo raizSub, Comparable buscado){
+        if (raizSub==null)
+           return null;
+        else if(buscado.esIgual(raizSub.getValor()))
+            return raizSub;
+        else if(buscado.esMenor(raizSub.getValor()))
+            return localizar(raizSub.getIzquierdo(), buscado);
+        else
+            return localizar(raizSub.getDerecho(), buscado);
     }
 
     
