@@ -251,6 +251,7 @@ public class ArbolBinarioBusqueda {
                antecesor.setIzquierdo(aux.getDerecho());
             else
                antecesor.setDerecho(aux.getDerecho());
+            //aqui me quede
                
     }
 
