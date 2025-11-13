@@ -222,6 +222,37 @@ public class ArbolBinarioBusqueda {
         else
             return localizar(raizSub.getDerecho(), buscado);
     }
+    /*
+     * Eliminar en un arbol de búsqueda
+     */
+    public boolean eliminar(Object valor){
+        Comparable dato = (Comparable)valor;
+        //Busco el nodo a eliminar y a su antecesor
+        Nodo antecesor = null;
+        Nodo aux = raiz;
+        while (aux!=null){
+            if(dato.esIgual(aux.getValor())){
+               break;
+            }
+            antecesor = aux;
+            if(dato.esMenor(aux.getValor()))
+                aux = aux.getIzquierdo();
+            else
+                aux = aux.getDerecho();
+        }
+        if(aux==null){
+            return false;
+        }
+        //si llega a este punto, el nodo a eliminar existe y es aux
+        // y su antecesor es antecesor
+        //1. Eliminar si tiene menos de dos hijos, incluso una hijo
+        if(aux.getIzquierdo()==null)
+            if(aux.getValor().esMenor(antecesor.getValor()))
+               antecesor.setIzquierdo(aux.getDerecho());
+            else
+               antecesor.setDerecho(aux.getDerecho());
+               
+    }
 
     
 }
