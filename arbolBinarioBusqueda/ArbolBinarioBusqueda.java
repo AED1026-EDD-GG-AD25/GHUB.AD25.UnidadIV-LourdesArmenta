@@ -225,34 +225,54 @@ public class ArbolBinarioBusqueda {
     /*
      * Eliminar en un arbol de búsqueda
      */
+    
+               
     public boolean eliminar(Object valor){
-        Comparable dato = (Comparable)valor;
-        //Busco el nodo a eliminar y a su antecesor
+        Comparable dato = (Comparable) valor;
+        //Buscar el nodo a elimininar y su antecesor
         Nodo antecesor = null;
         Nodo aux = raiz;
-        while (aux!=null){
+        while(aux !=null){
             if(dato.esIgual(aux.getValor())){
                break;
             }
             antecesor = aux;
             if(dato.esMenor(aux.getValor()))
-                aux = aux.getIzquierdo();
+               aux = aux.getIzquierdo();
             else
-                aux = aux.getDerecho();
+               aux = aux.getDerecho();
         }
-        if(aux==null){
-            return false;
-        }
-        //si llega a este punto, el nodo a eliminar existe y es aux
-        // y su antecesor es antecesor
-        //1. Eliminar si tiene menos de dos hijos, incluso una hijo
-        if(aux.getIzquierdo()==null)
-            if(aux.getValor().esMenor(antecesor.getValor()))
-               antecesor.setIzquierdo(aux.getDerecho());
-            else
-               antecesor.setDerecho(aux.getDerecho());
-            //aqui me quede
-               
+        if(aux == null)
+           return false;
+        //si llego a este punto, el nodo a eliminar existe y se encuentra en aux y su
+        //su padre es antecesor
+        //Examinar cada caso
+        //1. Si tiene menos de dos hijos, incluso una hoja, reajustar 
+        //   lo enlaces de antecesor
+        if (aux.getIzquierdo()==null)
+           if (aux.getValor().esMenor(antecesor.getValor()))
+              antecesor.setIzquierdo(aux.getDerecho());
+           else
+              antecesor.setDerecho(aux.getDerecho());
+           else if(aux.getDerecho()==null)
+              if(aux.getValor().esMenor(antecesor.getValor()))
+                  antecesor.setIzquierdo(aux.getIzquierdo());
+              else
+                  antecesor.setDerecho(aux.getIzquierdo());
+        else 
+            //el nodo a eliminar tiene ra,a izquierda u derecha
+            //caso 2.
+            reemplazarPorMayorIzquierdo(aux);
+            aux = null;
+            return true;
+
+    }
+    /*
+     * Reemplaza el nodo actual, por el mayor de la rama izquierda
+     * @param act : nodo actual o nodo a eliminar que tiene rama izquiera y rama derecha 
+     */
+    private void reemplazarPorMayorIzquierdo(Nodo act){
+
     }
 
     
