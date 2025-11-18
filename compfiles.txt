@@ -25,6 +25,7 @@
 ./miPrincipal/AppEnteroComparable.java
 ./miPrincipal/AppRecorridoArboles.java
 ./miPrincipal/AppOrdenarEstudiante.java
+./miPrincipal/AppTreeSet.java
 ./miPrincipal/AppEstudianteComparable.java
 ./miPrincipal/AppEstudiantesCriterioNombre.java
 ./miPrincipal/AppEstudiantesCriterioId.java

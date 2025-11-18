@@ -1,5 +1,7 @@
 package arbolBinarioBusqueda;
 
+import static org.junit.Assert.assertNull;
+
 import cola.Cola;
 import pila.Pila;
 
@@ -272,6 +274,22 @@ public class ArbolBinarioBusqueda {
      * @param act : nodo actual o nodo a eliminar que tiene rama izquiera y rama derecha 
      */
     private void reemplazarPorMayorIzquierdo(Nodo act){
+        Nodo mayor = act;
+        Nodo ant = act;
+        mayor = act.getIzquierdo();
+        //Buscar el mayor de la rama izquierda
+        //ant el antecesor de mayor (padre)
+        while (mayor.getDerecho() !=  null){
+            ant = mayor;
+            mayor = mayor.getDerecho();
+
+        }
+        act.setValor(mayor.getValor());//reemplazo
+        //reajuste
+        if(ant == act)
+           ant.setIzquierdo(mayor.getIzquierdo());
+        else
+           ant.setDerecho(mayor.getIzquierdo());
 
     }
 

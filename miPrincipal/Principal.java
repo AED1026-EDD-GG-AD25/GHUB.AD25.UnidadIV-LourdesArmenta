@@ -39,6 +39,10 @@ public class Principal {
                 case 9:
                     AppOperacionesABB.inicio();
                     break;
+                case 10:
+                    AppTreeSet.inicio();
+                    break;
+                    
                 case 0:
                     System.out.println("Hasta Luego");
                     break;
@@ -68,6 +72,7 @@ public class Principal {
         System.out.println("7. Ordenar Estudiante por criterio Promedio");
         System.out.println("8. Ordenar Estudiantes por ID interface Comparator");
         System.out.println("9. Operaciones con un ABB");
+        System.out.println("10.Operaciones Clase TreeSet");
         System.out.println();
         System.out.println("0. Salir");
         System.out.print("Selecciona la opción deseada:");
