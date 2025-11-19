@@ -28,6 +28,7 @@
 ./miPrincipal/AppPersonaComparable.java
 ./miPrincipal/AppOperacionesABB.java
 ./miPrincipal/Principal.java
+./miPrincipal/AppOperacionesAVL.java
 ./miPrincipal/AppEnteroComparable.java
 ./miPrincipal/AppRecorridoArboles.java
 ./miPrincipal/AppOrdenarEstudiante.java

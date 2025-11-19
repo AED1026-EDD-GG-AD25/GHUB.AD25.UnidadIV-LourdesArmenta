@@ -40,6 +40,9 @@ public class Principal {
                     AppOperacionesABB.inicio();
                     break;
                 case 10:
+                    AppOperacionesAVL.inicio();
+                    break;
+                case 11:
                     AppTreeSet.inicio();
                     break;
                     
@@ -73,6 +76,7 @@ public class Principal {
         System.out.println("8. Ordenar Estudiantes por ID interface Comparator");
         System.out.println("9. Operaciones con un ABB");
         System.out.println("10.Operaciones Clase TreeSet");
+        System.out.println("11. Operaciones árboles AVL");
         System.out.println();
         System.out.println("0. Salir");
         System.out.print("Selecciona la opción deseada:");
