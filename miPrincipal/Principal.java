@@ -40,10 +40,10 @@ public class Principal {
                     AppOperacionesABB.inicio();
                     break;
                 case 10:
-                    AppOperacionesAVL.inicio();
+                    AppTreeSet.inicio();
                     break;
                 case 11:
-                    AppTreeSet.inicio();
+                    AppOperacionesAVL.inicio();
                     break;
                     
                 case 0:
