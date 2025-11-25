@@ -20,18 +20,26 @@ public class AppOperacionesAVL {
              System.out.println("Forma del árbol despues de insertar: 5,9");
              BTreePrinter.printNode(arbol.getRaiz());
 
-             arbol.insertar(new Entero(3));
+            arbol.insertar(new Entero(3));
             System.out.println("Forma del árbol despues de insertar: 3");
-             BTreePrinter.printNode(arbol.getRaiz());
+            BTreePrinter.printNode(arbol.getRaiz());
 
-             arbol.insertar(new Entero(6));
-              System.out.println("Forma del árbol despues de insertar: 6");
-             BTreePrinter.printNode(arbol.getRaiz());
+            arbol.insertar(new Entero(6));
+            System.out.println("Forma del árbol despues de insertar: 6");
+            BTreePrinter.printNode(arbol.getRaiz());
 
+            arbol.insertar(new Entero(7));
+            System.out.println("Forma del árbol despues de insertar: 7");
+            BTreePrinter.printNode(arbol.getRaiz());
 
+            arbol.eliminar(new Entero(9));
+            System.out.println("Forma del árbol despues de eliminar 9");
+            BTreePrinter.printNode(arbol.getRaiz());
 
-             
-
+            arbol.eliminar(new Entero(4));
+            System.out.println("Forma del árbol despues de eliminar 4");
+            BTreePrinter.printNode(arbol.getRaiz());
+   
         }catch(Exception e){
             System.out.println("Error:"+e.getMessage());
         }
