@@ -45,6 +45,9 @@ public class Principal {
                 case 11:
                     AppOperacionesAVL.inicio();
                     break;
+                case 12:
+                    AppOperacionesGrafo.inicio();
+                    break;
                     
                 case 0:
                     System.out.println("Hasta Luego");
@@ -77,6 +80,7 @@ public class Principal {
         System.out.println("9. Operaciones con un ABB");
         System.out.println("10.Operaciones Clase TreeSet");
         System.out.println("11. Operaciones árboles AVL");
+        System.out.println("12. Operaciones con Grafos");
         System.out.println();
         System.out.println("0. Salir");
         System.out.print("Selecciona la opción deseada:");
