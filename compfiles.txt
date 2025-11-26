@@ -1,3 +1,5 @@
+./grafo/GrafoMatriz.java
+./grafo/Vertice.java
 ./arbolBinarioBusqueda/Persona.java
 ./arbolBinarioBusqueda/Util.java
 ./arbolBinarioBusqueda/Nodo.java
@@ -27,6 +29,7 @@
 ./pila/Nodo.java
 ./miPrincipal/AppPersonaComparable.java
 ./miPrincipal/AppOperacionesABB.java
+./miPrincipal/AppOperacionesGrafo.java
 ./miPrincipal/Principal.java
 ./miPrincipal/AppOperacionesAVL.java
 ./miPrincipal/AppEnteroComparable.java
